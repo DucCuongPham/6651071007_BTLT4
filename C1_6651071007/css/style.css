@@ -1,0 +1,405 @@
+/* ==============================
+   1. CÀI ĐẶT CHUNG
+   ============================== */
+
+/* Selector phần tử */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f2e9;
+    color: #3b2418;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   2. HEADER
+   ============================== */
+
+/* Selector phần tử */
+header {
+    min-height: 280px;
+    padding: 35px 20px;
+    text-align: center;
+    color: #fff;
+
+    /* Multiple background */
+    background-image:
+        linear-gradient(rgba(45, 24, 15, 0.55), rgba(45, 24, 15, 0.7)),
+        url("images/banner.jpg");
+
+    /* Background properties */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: border-box;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 0;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/* ==============================
+   3. NAVIGATION
+   ============================== */
+
+/* Selector hậu duệ */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #351b11;
+}
+
+/* Selector con */
+nav > ul > li {
+    margin: 0;
+}
+
+/* Selector kết hợp */
+nav li a {
+    display: block;
+    padding: 15px 28px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav li a:hover {
+    background-color: #d88935;
+    color: #fff;
+}
+
+
+/* ==============================
+   4. KHU VỰC NỘI DUNG
+   ============================== */
+
+main {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 25px;
+    align-items: start;
+}
+
+.content {
+    min-width: 0;
+}
+
+section {
+    margin-bottom: 35px;
+    padding: 20px;
+
+    /* Background origin + clip */
+    background-color: #fffaf2;
+    background-origin: padding-box;
+    background-clip: padding-box;
+
+    border: 1px solid #ead9c5;
+    border-radius: 14px;
+}
+
+section h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    color: #713d21;
+    border-bottom: 2px solid #d88935;
+    font-size: 24px;
+}
+
+
+/* ==============================
+   5. DANH SÁCH MÓN ĂN
+   ============================== */
+
+/* Selector lớp */
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+/* ==============================
+   6. CARD MÓN ĂN
+   ============================== */
+
+/* Selector phần tử + class */
+article {
+    background: #fff;
+    border: 1px solid #eadfd2;
+    border-radius: 12px;
+    overflow: hidden;
+
+    /* Box shadow */
+    box-shadow: 0 4px 12px rgba(71, 42, 24, 0.12);
+
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(71, 42, 24, 0.2);
+}
+
+
+/* ==============================
+   7. ẢNH MÓN ĂN
+   ============================== */
+
+/* Selector class */
+.mon {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+
+/* ==============================
+   8. NỘI DUNG CARD
+   ============================== */
+
+/* Selector con */
+article h3 {
+    margin: 14px 15px 8px;
+    color: #5b2e1c;
+    font-size: 18px;
+}
+
+article p {
+    margin: 0 15px 12px;
+    color: #66564b;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   9. GIÁ + NÚT ĐẶT MÓN
+   ============================== */
+
+.gia {
+    display: inline-block;
+    margin: 0 0 15px 15px;
+    color: #c66d16;
+    font-weight: bold;
+}
+
+.datmon {
+    float: right;
+    margin: 0 15px 15px 0;
+    padding: 7px 13px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #d87920;
+    color: white;
+
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.datmon:hover {
+    background-color: #a94f0c;
+}
+
+
+/* ==============================
+   10. ASIDE - MÓN YÊU THÍCH
+   ============================== */
+
+/* Selector ID */
+aside {
+    position: sticky;
+    top: 20px;
+    padding: 20px;
+
+    background-color: #fffaf2;
+
+    /* Khung trang trí bằng border-image */
+    border: 12px solid transparent;
+    border-image:
+        url("images/border.png")
+        30
+        round;
+
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(71, 42, 24, 0.15);
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #713d21;
+    font-size: 20px;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside li {
+    margin-bottom: 8px;
+}
+
+aside p {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #5a301d;
+    color: white;
+}
+
+
+/* ==============================
+   11. FOOTER
+   ============================== */
+
+/* Selector phần tử */
+footer {
+    padding: 30px 7%;
+    background-color: #29150e;
+    color: #ead8c8;
+
+    /* Multiple background cho footer */
+    background-image:
+        linear-gradient(rgba(41, 21, 14, 0.94), rgba(41, 21, 14, 0.94)),
+        url("images/footer-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+    background-clip: border-box;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer-column h3 {
+    color: #e39a4c;
+    margin-top: 0;
+}
+
+.footer-column p {
+    margin: 7px 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin: 7px 0;
+}
+
+.footer-column a {
+    color: #ead8c8;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #e39a4c;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: 25px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #5a3a2c;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   12. RESPONSIVE
+   ============================== */
+
+/* Media query */
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        position: static;
+    }
+
+    .menu-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li a {
+        padding: 12px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .menu-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
